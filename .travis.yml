@@ -4,4 +4,4 @@ python:
 install:
   - pip freeze > requirements.txt
 script:
-  - python hello.py test
+  - python char.py test
