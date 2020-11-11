@@ -3,5 +3,6 @@ python:
   - 3.8
 install:
   - pip freeze > requirements.txt
+  - pip unistall jenkins
 script:
   - python char.py test
