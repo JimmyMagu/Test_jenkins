@@ -6,19 +6,10 @@ pipeline {
   
     stage("build") {
       
-      steps { 
-          
-        } 
-     }
-      stage("test") {
-      
-      steps { 
-        } 
-     }
-      stage("deploy") {
-      
-      steps { 
-        } 
+      steps {
+        sh 'python -m py_compile char.py num.py'
+        stash(name: 'compiled-results', includes:'*.py*')
+        }
      }  
   }
 }
