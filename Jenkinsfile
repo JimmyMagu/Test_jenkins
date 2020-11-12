@@ -1,17 +1,10 @@
 pipeline {
-
-  agent any 
-  
-  stages {
-  
-    stage("build") {
-      
-      steps {
-        //Runs python file to compile results
-        sh 'python -m py_compile char.py num.py'
-        //create a compile folder for joined py folder
-        stash(name: 'compiled-results', includes:'*.py*')
+    agent any
+    stages {
+        stage('Stage 1') {
+            steps {
+                echo 'Hello world!'
+            }
         }
-     }  
-  }
+    }
 }
