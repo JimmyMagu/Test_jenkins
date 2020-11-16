@@ -11,6 +11,6 @@ def check(word):
 def load(dictionary):
     file = open(dictionary, "r")
     for line in file:
-        words.add(line.rsplit())\
+        words.add(line.rsplit())
     close(file)
     return True
