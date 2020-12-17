@@ -1,9 +1,23 @@
 pipeline {
     agent any
     stages {
-        stage('Stage 1') {
+        stage('Build') {
             steps {
-                echo 'Hello world!'
+                //
+            }
+        }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                run python3 4.py
+            }
+        }
+    }
+    stages {
+        stage('Deploy') {
+            steps {
+                //
             }
         }
     }
