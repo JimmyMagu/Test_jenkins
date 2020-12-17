@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                run python3 4.py
+                run 4.py
             }
         }
     }
